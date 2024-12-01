@@ -1,0 +1,25 @@
+/* Contact section styles */
+.contact-section {
+    padding: 20px;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+  }
+  
+  .contact-section h2 {
+    font-size: 2rem;
+    color: var(--text-color);
+  }
+  
+  .contact-section p {
+    font-size: 1rem;
+    color: var(--text-color);
+  }
+  
+  .contact-section a {
+    color: var(--accent-color);
+    text-decoration: none;
+  }
+  
+  .contact-section a:hover {
+    text-decoration: underline;
+  }

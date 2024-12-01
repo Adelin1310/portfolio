@@ -1,0 +1,76 @@
+/* Skills section styles */
+.skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.skills-section-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25%;
+}
+
+.skills-section {
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.skills-section h2 {
+  font-size: 2rem;
+  color: var(--text-color);
+  margin-bottom: 50px;
+}
+
+.circle {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  animation: spin 50s linear infinite; /* Add spinning animation */
+  
+  /* Add glow */
+  border: 2px solid var(--accent-color);
+  box-shadow: 0 0 5px var(--accent-color), 0 0 10px var(--accent-color), 0 0 15px var(--accent-color), 0 0 20px var(--accent-color), inset 0 0 5px var(--accent-color), inset 0 0 10px var(--accent-color), inset 0 0 15px var(--accent-color), inset 0 0 20px var(--accent-color);
+  background: transparent;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.skill {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  margin: -25px;
+  background-color: var(--skill-bg-color);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: var(--skill-color);
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.skill i {
+  transform: rotate(0deg); /* Keep the icons fixed */
+}
+
+.skill:hover {
+  background-color: var(--skill-hover-color);
+}
