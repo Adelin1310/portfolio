@@ -33,10 +33,19 @@
   height: 300px;
   border-radius: 50%;
   animation: spin 50s linear infinite; /* Add spinning animation */
-  
+}
+
+.circle.frontend {
   /* Add glow */
-  border: 2px solid var(--accent-color);
-  box-shadow: 0 0 5px var(--accent-color), 0 0 10px var(--accent-color), 0 0 15px var(--accent-color), 0 0 20px var(--accent-color), inset 0 0 5px var(--accent-color), inset 0 0 10px var(--accent-color), inset 0 0 15px var(--accent-color), inset 0 0 20px var(--accent-color);
+  border: 2px solid var(--frontend-color);
+  box-shadow: 0 0 5px var(--frontend-color), 0 0 10px var(--frontend-color), 0 0 15px var(--frontend-color), 0 0 20px var(--frontend-color), inset 0 0 5px var(--frontend-color), inset 0 0 10px var(--frontend-color), inset 0 0 15px var(--frontend-color), inset 0 0 20px var(--frontend-color);
+  background: transparent;
+}
+
+.circle.backend {
+  /* Add glow */
+  border: 2px solid var(--backend-color);
+  box-shadow: 0 0 5px var(--backend-color), 0 0 10px var(--backend-color), 0 0 15px var(--backend-color), 0 0 20px var(--backend-color), inset 0 0 5px var(--backend-color), inset 0 0 10px var(--backend-color), inset 0 0 15px var(--backend-color), inset 0 0 20px var(--backend-color);
   background: transparent;
 }
 
@@ -67,10 +76,46 @@
   transition: background-color 0.3s ease;
 }
 
+.circle.backend .skill {
+  color: var(--backend-color);
+}
+
+.skill:hover i {
+  transform: rotate(360deg); /* Rotate the icons on hover */
+}
+
 .skill i {
   transform: rotate(0deg); /* Keep the icons fixed */
 }
 
 .skill:hover {
-  background-color: var(--skill-hover-color);
+  font-size: 2.3rem;
+}
+
+/* Media queries */
+@media screen and (max-width: 1366px) {
+  .skills-section-container {
+    gap: 10%;
+  }
+
+  .circle {
+    width: 200px;
+    height: 200px;
+  }
+
+  .skills-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .skill {
+    width: 40px;
+    height: 40px;
+    margin: -20px;
+    font-size: 1.2rem;
+  }
+
+  .skill:hover {
+    font-size: 1.5rem;
+  }
 }

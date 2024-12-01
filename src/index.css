@@ -15,6 +15,10 @@
   --landing-page-color: #f39c12;
   --web-app-color: #e74c3c;
   --api-color: #9b59b6;
+
+  /* Technologies colors */
+  --frontend-color: #3498db;
+  --backend-color: #e74c3c;
 }
 
 body {
@@ -37,8 +41,6 @@ code {
 * {
   box-sizing: border-box;
   /* Add a smooth transition to everything (fade in)*/
-  transition: all 1s ease;
-
   font-family: 'Noto Serif', serif;
 }
 

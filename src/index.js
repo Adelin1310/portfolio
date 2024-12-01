@@ -1,11 +1,17 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import './index.css';
-import './styles.css'; // Import the new styles
-import 'devicon/devicon.min.css'; // Import the devicon styles
 import App from './App';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+import 'devicon/devicon.min.css';
+
+// Add all solid icons to the library
+library.add(fas);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  <React.StrictMode>
     <App />
+  </React.StrictMode>
 );

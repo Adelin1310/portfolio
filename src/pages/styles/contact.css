@@ -1,25 +1,49 @@
 /* Contact section styles */
 .contact-section {
-    padding: 20px;
-    background-color: var(--primary-color);
-    border-radius: 5px;
-  }
-  
-  .contact-section h2 {
-    font-size: 2rem;
-    color: var(--text-color);
-  }
-  
-  .contact-section p {
-    font-size: 1rem;
-    color: var(--text-color);
-  }
-  
-  .contact-section a {
-    color: var(--accent-color);
-    text-decoration: none;
-  }
-  
-  .contact-section a:hover {
-    text-decoration: underline;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-section h2 {
+  font-size: 2.5rem;
+  color: var(--text-color);
+  margin-bottom: 20px;
+}
+
+.contact-section p {
+  font-size: 1.2rem;
+  color: var(--text-color);
+  margin-bottom: 20px;
+}
+
+.contact-section ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.contact-section li {
+  display: flex;
+  align-items: center;
+}
+
+.contact-section a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.contact-section a:hover {
+  color: var(--text-color);
+}
+
+.contact-section a i {
+  margin-right: 8px;
+  font-size: 1.5rem;
+}
