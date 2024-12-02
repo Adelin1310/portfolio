@@ -9,7 +9,7 @@ const Contact = () => {
       <ul>
         <li>
           <a href="mailto:adelinandrica@gmail.com">
-            <FontAwesomeIcon icon="envelope" /> Email
+            <FontAwesomeIcon icon="envelope" />
           </a>
         </li>
         <li>
@@ -18,7 +18,7 @@ const Contact = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <FontAwesomeIcon icon={faLinkedin} /> LinkedIn
+            <FontAwesomeIcon icon={faLinkedin} />
           </a>
         </li>
         <li>
@@ -27,7 +27,7 @@ const Contact = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <FontAwesomeIcon icon={faGithub} /> GitHub
+            <FontAwesomeIcon icon={faGithub} />
           </a>
         </li>
       </ul>

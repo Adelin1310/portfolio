@@ -3,7 +3,26 @@ import "./styles/skills.css";
 import { data } from "../data";
 import "devicon/devicon.min.css";
 
+const selectedSkillStyle = {
+  // It's important to make sure that the selected skill sticks in the middle of the circle and that it does not rotate along with it!
+  // Absolute positioning works well for this purpose.
+  // Only the rotation needs to be adjusted so that it does not rotate along with the circle.
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  fontSize: "1.5rem",
+  color: "var(--text-color)",
+  opacity: 1,
+  transition: "opacity 0.3s",
+  pointerEvents: "none",
+  // Maybe apply inverse rotation to the selected skill so that it does not rotate along with the circle.
+  rotate: "rotate(-360deg)",
+};
+
 const Skills = () => {
+  const [selectedFESkill, setSelectedFESkill] = React.useState(null);
+  const [selectedBESkill, setSelectedBESkill] = React.useState(null);
   const skills = {
     frontEnd: [
       "JavaScript",
@@ -62,6 +81,9 @@ const Skills = () => {
         <div className="skills-section">
           <h2>Front-End</h2>
           <div className="circle frontend">
+            <span className="selected-skill" style={selectedSkillStyle}>
+              {selectedFESkill}
+            </span>
             {frontendSkills.map((skill, index) => (
               <div
                 key={index}
@@ -74,7 +96,10 @@ const Skills = () => {
                   }deg)`,
                 }}
               >
-                <i className={icons[skill]}></i>
+                <i
+                  className={icons[skill]}
+                  onClick={() => setSelectedFESkill(skill)}
+                ></i>
               </div>
             ))}
           </div>
@@ -82,6 +107,9 @@ const Skills = () => {
         <div className="skills-section">
           <h2>Back-End</h2>
           <div className="circle backend">
+            <span className="selected-skill" style={selectedSkillStyle}>
+              {selectedBESkill}
+            </span>
             {backendSkills.map((skill, index) => (
               <div
                 key={index}
@@ -94,7 +122,10 @@ const Skills = () => {
                   }deg)`,
                 }}
               >
-                <i className={icons[skill]}></i>
+                <i
+                  className={icons[skill]}
+                  onClick={() => setSelectedBESkill(skill)}
+                ></i>
               </div>
             ))}
           </div>

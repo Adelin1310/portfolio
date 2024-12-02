@@ -59,7 +59,7 @@
 
 /* Media queries */
 
-@media screen and (max-width: 1366px) {
+@media screen and (max-width: 1920px) {
     .about-section {
         flex-direction: column;
         width: 80%;
@@ -93,6 +93,35 @@
     }
 }
 
+/* Media queries for iPhone 12 Pro */
+@media screen and (max-width: 450px) {
+    .about-section {
+      flex-direction: column;
+      padding: 20px;
+    }
+  
+    .about-left,
+    .about-right {
+      width: 100%;
+      text-align: center;
+    }
+  
+    .about-photo {
+      width: 200px;
+      height: 250px;
+    }
+  
+    .section-title {
+      font-size: 1.8rem;
+      margin: auto;
+      margin-bottom: 20px;
+    }
+  
+    .about-description {
+      font-size: 0.9rem;
+    }
+  }
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -101,3 +130,4 @@
         opacity: 1;
     }
 }
+

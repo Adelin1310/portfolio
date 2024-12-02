@@ -47,3 +47,31 @@
   margin-right: 8px;
   font-size: 1.5rem;
 }
+
+/* Media queries for iPhone 12 Pro */
+@media screen and (max-width: 450px) {
+  .contact-section {
+    padding: 20px;
+  }
+
+  .contact-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .contact-section p {
+    font-size: 1rem;
+  }
+
+  .contact-section ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .contact-section a {
+    font-size: 1rem;
+  }
+
+  .contact-section a i {
+    font-size: 1.2rem;
+  }
+}

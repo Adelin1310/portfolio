@@ -93,7 +93,7 @@
 }
 
 /* Media queries */
-@media screen and (max-width: 1366px) {
+@media screen and (max-width: 1920px) {
   .skills-section-container {
     gap: 10%;
   }
@@ -117,5 +117,34 @@
 
   .skill:hover {
     font-size: 1.5rem;
+  }
+}
+
+/* Media queries for iPhone 12 Pro */
+@media screen and (max-width: 450px) {
+  .skills-section-container {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .circle {
+    width: 150px;
+    height: 150px;
+  }
+
+  .skills-section h2 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+  }
+
+  .skill {
+    width: 30px;
+    height: 30px;
+    margin: -15px;
+    font-size: 1rem;
+  }
+
+  .skill:hover {
+    font-size: 1.2rem;
   }
 }
